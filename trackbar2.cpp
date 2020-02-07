@@ -48,6 +48,7 @@ int main(int argc, char** argv)
 
 	Rect roi = rrect.boundingRect() & Rect(0, 0, img.cols, img.rows);
 	cout << roi << endl;
+	// imwrite("a.png", img(roi));
 	inRange(img(roi), Scalar(b, g, r), Scalar(bm, gm, rm), res);
 
 	contours.clear();
